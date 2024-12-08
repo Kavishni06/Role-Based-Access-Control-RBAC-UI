@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+      <h3>User Management</h3>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary mb-3" (click)="openAddUserForm()">Add User</button>
+      
+      <!-- Add/Edit User Form -->
+      <div *ngIf="isFormVisible" class="mb-4">
+        <h4>{{ isEditMode ? 'Edit User' : 'Add User' }}</h4>
+        <form (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="userForm.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="userForm.email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" [(ngModel)]="userForm.role" name="role" required>
+          </div>
+          <button type="submit" class="btn btn-success mt-2">{{ isEditMode ? 'Save Changes' : 'Add User' }}</button>
+          <button type="button" class="btn btn-secondary mt-2" (click)="closeForm()">Cancel</button>
+        </form>
+      </div>
+
+      <!-- User Table -->
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button class="btn btn-warning" (click)="editUser(user)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h1>Welcome to Admin Dashboard!</h1>
+  <div class="nav-container">
+    <div class="nav-box users">
+        <a class="nav-link" routerLink="/user-management" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Users</a>
+    </div>
+    <div class="nav-box roles">
+        <a class="nav-link" routerLink="/role-management" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Roles</a>
+    </div>
+    <div class="nav-box permissions">
+        <a class="nav-link" routerLink="/permission-management" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Permissions</a>
+    </div>
+</div>
+  <router-outlet></router-outlet>
+</div>

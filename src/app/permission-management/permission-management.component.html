@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+      <h3>Permission Management</h3>
+    </div>
+    <div class="card-body">
+      <!-- Add New Permission Section -->
+      <div class="mb-3">
+        <input type="text" [(ngModel)]="newPermission.name" placeholder="Permission Name" class="form-control mb-2" />
+        <input type="text" [(ngModel)]="newPermission.description" placeholder="Description" class="form-control mb-2" />
+        <button class="btn btn-primary mb-3" (click)="addPermission()">Add Permission</button>
+      </div>
+  
+      <!-- Permission Table -->
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Permission Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let permission of permissions; let i = index">
+            <td>{{ permission.name }}</td>
+            <td>{{ permission.description }}</td>
+            <td>
+              <button class="btn btn-warning" (click)="editPermission(i)">Edit</button>
+              <button class="btn btn-danger" (click)="deletePermission(i)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

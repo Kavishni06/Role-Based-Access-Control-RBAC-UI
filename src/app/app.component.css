@@ -1,0 +1,44 @@
+
+h1 {
+    text-align: center;
+}
+.nav-container {
+    display: flex;                   /* Use flexbox for layout */
+    justify-content: center;         /* Center items horizontally */
+    gap: 20px;                      /* Space between boxes */
+    padding: 20px;                  /* Padding around the container */
+}
+
+.nav-box {
+    border-radius: 8px;            /* Rounded corners */
+    transition: transform 0.3s;     /* Smooth scaling on hover */
+}
+
+.users {
+    background-color:rgb(1, 66, 120); 
+         /* Blue color for Users */
+}
+
+.roles {
+    background-color: #28a745;      /* Green color for Roles */
+}
+
+.permissions {
+    background-color: #ffc107;      /* Yellow color for Permissions */
+}
+
+.nav-link {
+    display: block;                 /* Make the link a block element */
+    padding: 15px 30px;            /* Padding inside the box */
+    color: white;                   /* Text color */
+    text-align: center;             /* Center text */
+    text-decoration: none;          /* Remove underline from links */
+}
+
+.nav-box:hover {
+    transform: scale(1.05);         /* Slightly enlarge the box on hover */
+}
+
+.nav-link.active {
+    opacity: 0.8;                   /* Dim the active link slightly */
+}
