@@ -104,7 +104,7 @@ When a new entry is added, edited, or deleted, the data is updated in localStora
 - app.routes.ts: Defines routing paths for navigation between components.
 
 # Local Storage Data Example:
-This is how the exixting data and the changes made by the admin will be visible in the console.log screen.
+This is how the exixting data and the changes made by the admin will be visible in the Browser(console.log screen).
 # Users:
 json:
 [
