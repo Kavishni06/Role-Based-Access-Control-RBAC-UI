@@ -1,7 +1,7 @@
 # Role-Based-Access-Control-RBAC-UI USING ANGULAR
 Built an admin dashboard using Angular framework for managing users,roles and permission.The main goal of this project is to design a secure and user-friendly interface where administrators can assign roles,define permissions,and manage users effectively.
 
-Admin Dashboard Management System
+Admin Dashboard Management System:
 This project is an Angular-based Admin Dashboard Management System that provides functionality to manage users, roles, and permissions. It allows you to create, edit, delete, and view users, roles, and permissions. The data is persisted across page refreshes using localStorage.
 
 Features
