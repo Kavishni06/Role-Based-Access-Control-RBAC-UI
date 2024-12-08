@@ -6,7 +6,7 @@ This project is an Angular-based Admin Dashboard Management System that provides
 
 # Features
 # User Management
-Add: Add new users with name, email, and role.
+- Add: Add new users with name, email, and role.
 Edit: Modify user details such as name, email, and role.
 Delete: Remove users from the system.
 Persistence: User data is stored in the browser's localStorage to retain it across page refreshes.
